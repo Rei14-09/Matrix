@@ -7,9 +7,15 @@ If it is square, return True.
 
 
 def check_square_matrix(matrix):
+
+    assert isinstance(matrix,list)    
+
     if not matrix:
         return False
     for fila in matrix: 
+
+        assert isinstance(for number in fila())
+        
         if len(fila) != len(matrix):
             return False
     else:
@@ -51,3 +57,5 @@ print(check_square_matrix([[2,2], [2,2], [2,2], [2,2]]))
 # >>> False
 print(check_square_matrix([[1,1], [1,1], [1,1]]))   
 # >>> False
+print(check_square_matrix([[1,1], ['1',1], [1,1], [1,'1']]))
+# >>> None
