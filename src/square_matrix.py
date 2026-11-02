@@ -14,7 +14,7 @@ def check_square_matrix(matrix):
         return False
     for fila in matrix: 
 
-        assert isinstance(for number in fila())
+        assert isinstance(fila, list)
         
         if len(fila) != len(matrix):
             return False
@@ -22,40 +22,38 @@ def check_square_matrix(matrix):
         return True
 
 
-
-print(check_square_matrix([[1, 0], [0, 1]]) )
-# >>> True
-print(check_square_matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]))  
-# >>> True
-print(check_square_matrix([[1, 0], [0, 1], [1, 0]])) 
- # >>> False
-print(check_square_matrix([]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0, 0]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1]]))
-  # >>> False
-print(check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]))  
-# >>> False
-print(check_square_matrix([[1, 0], [1, 1]]))
-# >>> True
-print(check_square_matrix([[1,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]])) 
-# >>> True
-print(check_square_matrix([[1,1,1], [1,1,1], [1,1,1], [2,2,2]]))
-# >>> False
-print(check_square_matrix([[2,2], [2,2], [2,2], [2,2]]))
-# >>> False
-print(check_square_matrix([[1,1], [1,1], [1,1]]))   
-# >>> False
-print(check_square_matrix([[1,1], ['1',1], [1,1], [1,'1']]))
-# >>> None
+if __name__ == "__main__":
+    assert check_square_matrix([[1, 0], [0, 1]]) == True
+    # >>> True
+    assert check_square_matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]) == True
+    # >>> True
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0]]) == False
+    # >>> False
+    assert check_square_matrix([]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0, 0]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [1, 0]]) == False
+    # >>> False
+    assert check_square_matrix([[1, 0], [1, 1]]) == True
+    # >>> True
+    assert check_square_matrix([[1,1,1,1], [1,1,1,1], [1,1,1,1], [1,1,1,1]]) == True
+    # >>> True
+    assert check_square_matrix([[1,1,1], [1,1,1], [1,1,1], [2,2,2]]) == False
+    # >>> False
+    assert check_square_matrix([[2,2], [2,2], [2,2], [2,2]]) == False
+    # >>> False
+    assert check_square_matrix([[1,1], [1,1], [1,1]]) == False   
+    # >>> False
