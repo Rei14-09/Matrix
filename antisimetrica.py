@@ -6,8 +6,8 @@ def es_antisimetrica(matriz):
         if len(fila) != len(matriz):
             return False
 
-    for i in range(filas):
-        for j in range(filas):
+    for i in range(len(matriz)):
+        for j in range(len(matriz)):
             if matriz[i][j] != -matriz[j][i]:
                 return False
                 
